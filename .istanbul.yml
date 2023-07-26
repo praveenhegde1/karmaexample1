@@ -1,0 +1,31 @@
+instrumentation:
+  excludes: ['node_modules/*.*']
+reporting: ['lcov', 'text-summary', 'html']  
+instrumentation:
+  root: ./source           
+  extensions:           
+    - .js
+  excludes:             
+    - node_modules/**
+    - test/**
+  include-all-sources: true  
+
+check:
+  global:
+    statements: 80      
+    branches: 80        
+    functions: 80      
+    lines: 80           
+  each:
+    statements: 70      
+    branches: 70        
+    functions: 70       
+    lines: 70           
+
+reporting:
+  reports:
+    - lcov             
+    - text-summary     
+    - html             
+  dir: coverage        
+  print: none       
