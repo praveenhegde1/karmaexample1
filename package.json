@@ -5,6 +5,7 @@
   "main": "source/calculator.js",
   "scripts": {
     "test": "npx jasmine"
+    "test": "npm run jasmine"
   },
   "author": "",
   "license": "ISC",
